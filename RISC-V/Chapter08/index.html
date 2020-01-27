@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>RISC-V 사용 설명서 - VLSISYS Lab. (SookMyung Univ.)</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "RISC-V \uc0ac\uc6a9 \uc124\uba85\uc11c";
+    var mkdocs_page_input_path = "RISC-V/Chapter08.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> VLSISYS Lab. (SookMyung Univ.)</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../about/">About</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">WSL</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="/WSL/00_install">Install</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">RISC-V</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="/RISC-V/Chapter01">Chapter01</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="/RISC-V/Chapter02">Chapter02</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="/RISC-V/Chapter03">Chapter03</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="/RISC-V/Chapter04">Chapter04</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="/RISC-V/Chapter05">Chapter05</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="/RISC-V/Chapter06">Chapter06</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="/RISC-V/Chapter07">Chapter07</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="/RISC-V/Chapter08">Chapter08</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="/RISC-V/Chapter09">Chapter09</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="/RISC-V/Chapter10">Chapter10</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">VLSISYS Lab. (SookMyung Univ.)</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>RISC-V 사용 설명서</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="_1">참고문헌<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p><a href="https://readthedocs.org/projects/risc-v-getting-started-guide/downloads/pdf/latest/">RISC-V-GettingStartedGuide (2019-05-31)</a></p>
+<h2 id="chapter_8">Chapter 8<a class="headerlink" href="#chapter_8" title="Permanent link">#</a></h2>
+<h3 id="running_64-_and_32-bit_risc-v_linux_on_qemu">Running 64- and 32-bit RISC-V Linux on QEMU<a class="headerlink" href="#running_64-_and_32-bit_risc-v_linux_on_qemu" title="Permanent link">#</a></h3>
+<h4 id="qemu_quick_emulato"><a href="https://www.qemu.org/">QEMU</a> (Quick EMUlato)<a class="headerlink" href="#qemu_quick_emulato" title="Permanent link">#</a></h4>
+<p>하드웨어 가상화의 기능을 갖춘, 무료이자 오픈 소스 CPU 에뮬레이터이다. QEMU에 KVM을 적용할 수 있으며, 사실상 리눅스에서 사용하는 가상머신의 표준이다.</p>
+<h4 id="81_prerequisites">8.1 Prerequisites<a class="headerlink" href="#81_prerequisites" title="Permanent link">#</a></h4>
+<p>QEMU RISC-V 포트에서 Linux를 실행하려면 일부 전제 조건을 설치해야합니다. 다양한 Linux 배포판과 macOS에 대한 지침을 아래에서 찾으십시오.</p>
+<p>우분투/데비안 계열의 리눅스는 아래 패키지를 설치하면 된다.</p>
+<pre><code>sudo apt install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev git
+</code></pre>
+
+<p>페도라/CentOS/RHEL 계열과 macOS는 참고문헌 참조!</p>
+<h4 id="82_getting_the_sources">8.2 Getting the sources<a class="headerlink" href="#82_getting_the_sources" title="Permanent link">#</a></h4>
+<p>먼저 모든 소스를 다운로드하고 빌드 할 작업 디렉토리를 만듭니다.</p>
+<p>64-bit</p>
+<pre><code>mkdir riscv64-linux
+cd riscv64-linux
+</code></pre>
+
+<p>32-bit</p>
+<pre><code>mkdir riscv32-linux
+cd riscv32-linux
+</code></pre>
+
+<p>그리고 아래와 같이 필요한 소스들을 다운받는다:</p>
+<ul>
+<li>RISC-V newlib and Linux toolchains</li>
+<li>QEMU</li>
+<li>Linux</li>
+<li>BBL (Berkeley Boot Loader)</li>
+<li>Busybear Linux (RISC-V root filesystem image)</li>
+</ul>
+<pre><code>git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
+git clone https://github.com/qemu/qemu
+git clone https://github.com/torvalds/linux
+git clone https://github.com/riscv/riscv-pk
+git clone https://github.com/michaeljclark/busybear-linux
+</code></pre>
+
+<p>위 git clone 은 좀 걸린다!</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a href="https://www.sifive.com/boards/">SiFive 웹 사이트</a>에서 사전 구축 된 RISC-V GCC 툴체인을 사용할 수도 있습니다.</p>
+</div>
+<p>32 비트의 경우, 다음 패치를 각각의 저장소에 적용하십시오 : linux.diff and busybear-linux.diff:</p>
+<pre><code>cd &lt;repository_name&gt;
+git apply &lt;path_to_diffs&gt;/&lt;repository_name&gt;.diff
+</code></pre>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>이건 나중에 해봐야겠다</p>
+</div>
+<h4 id="83_building">8.3 Building<a class="headerlink" href="#83_building" title="Permanent link">#</a></h4>
+<h5 id="riscv-gnu-toolchain">riscv-gnu-toolchain<a class="headerlink" href="#riscv-gnu-toolchain" title="Permanent link">#</a></h5>
+<p>64-bit</p>
+<pre><code>cd riscv-gnu-toolchain
+./configure --prefix=/opt/riscv64
+sudo make newlib -j$(nproc)
+sudo make linux -j$(nproc)
+</code></pre>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>위에서 <code>--prefix</code> 옵션 뒤에 나오는 경로는 install path이다.</li>
+<li>당연히 sudo가 붙어야 제대로 실행된다. (꽤나 오래걸림)</li>
+</ul>
+</div>
+<p>32-bit</p>
+<pre><code>cd riscv-gnu-toolchain
+
+# pick an install path, e.g. /opt/riscv32
+
+./configure --prefix=/opt/riscv32 --with-arch=rv32gc --with-abi=ilp32d
+make newlib -j$(nproc)
+make linux -j$(nproc)
+
+# export variables
+export PATH=&quot;$PATH:/opt/riscv32/bin&quot;
+export RISCV=&quot;/opt/riscv32&quot;
+</code></pre>
+
+<h5 id="qemu">qemu<a class="headerlink" href="#qemu" title="Permanent link">#</a></h5>
+<p>에러가 뜬다. (쉬운게 없다. 하나 고치면 다른 에러가 또!, 구글링하면 나오는것을 조합해보자)</p>
+<pre><code>sudo apt-get install libglib2.0
+sudo apt-get install libpixman-1-dev
+</code></pre>
+
+<p>위 패키치 설치 후</p>
+<p>64-bit</p>
+<pre><code>cd qemu
+git checkout v3.0.0
+./configure --target-list=riscv64-softmmu
+make -j$(nproc)
+sudo make install
+</code></pre>
+
+<p>32-bit</p>
+<pre><code>cd qemu
+git checkout v3.0.0
+./configure --target-list=riscv32-softmmu
+make -j$(nproc)
+sudo make install
+</code></pre>
+
+<h5 id="linux">linux<a class="headerlink" href="#linux" title="Permanent link">#</a></h5>
+<p>64-bit</p>
+<pre><code>cd linuxgit checkout v4.19-rc3
+cp ../busybear-linux/conf/linux.config .config
+make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- olddefconf
+</code></pre>
+
+<p>32-bit</p>
+<pre><code>cd linuxgit checkout v4.19-rc3
+cp ../busybear-linux/conf/linux.config .config
+make ARCH=riscv CROSS_COMPILE=riscv32-unknown-linux-gnu- olddefconf
+</code></pre>
+
+<h5 id="enter_the_kernel_configuration_check_the_following_options">enter the kernel configuration &amp; check the following options<a class="headerlink" href="#enter_the_kernel_configuration_check_the_following_options" title="Permanent link">#</a></h5>
+<ul>
+<li>ARCH_RV64I</li>
+<li>CMODEL_MEDANY</li>
+<li>CONFIG_SIFIVE_PLIC</li>
+</ul>
+<p>또 에러가 난다.</p>
+<pre><code>sudo apt-get install libncurses-dev
+</code></pre>
+
+<p>위 패키지 설치하면 해결된다.</p>
+<p>64-bit</p>
+<pre><code># enter kernel configuration
+make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- nconf
+</code></pre>
+
+<p>32-bit</p>
+<pre><code># enter kernel configuration
+make ARCH=riscv CROSS_COMPILE=riscv32-unknown-linux-gnu- nconf
+</code></pre>
+
+<h5 id="after_accepting_changes_in_the_configuration_compile_the_kernel">After accepting changes in the configuration, compile the kernel:<a class="headerlink" href="#after_accepting_changes_in_the_configuration_compile_the_kernel" title="Permanent link">#</a></h5>
+<p>64-bit</p>
+<pre><code>make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- vmlinux -j$(nproc)
+</code></pre>
+
+<p>32-bit</p>
+<pre><code>make ARCH=riscv CROSS_COMPILE=riscv32-unknown-linux-gnu- vmlinux -j$(nproc)
+</code></pre>
+
+<h5 id="build_bbl_berkeley_boot_loader">Build BBL (Berkeley Boot Loader 인듯):<a class="headerlink" href="#build_bbl_berkeley_boot_loader" title="Permanent link">#</a></h5>
+<p>64-bit</p>
+<pre><code>cd riscv-pk
+mkdir build &amp;&amp; cd build
+../configure --enable-logo --host=riscv64-unknown-elf --with-payload=../../linux/vmlinux
+make -j$(nproc)
+</code></pre>
+
+<p>32-bit</p>
+<pre><code>cd riscv-pk
+mkdir build &amp;&amp; cd build
+../configure --enable-logo --host=riscv32-unknown-elf --with-payload=../../linux/vmlinux
+make -j$(nproc)
+</code></pre>
+
+<h5 id="build_busybear_linux">Build Busybear Linux:<a class="headerlink" href="#build_busybear_linux" title="Permanent link">#</a></h5>
+<pre><code>cd busybear-linux
+make -j$(nproc)
+</code></pre>
+
+<p>여기서 <code>make</code> 때릴 때 에러가 나는데 <code>/busybear-linux/src</code> 내의 <code>riscv-pk</code> 폴더를 지우고 <code>ln -s ../../riscv-pk riscv-pk</code> 로 해결한듯 보였으나 아래와 같은 에러를 뿌렸다. WSL에서는 안되는 것인가... 힘들구만</p>
+<pre><code>env: ‘Files/WindowsApps/CanonicalGroupLimited.Ubuntu18.04onWindows_1804.2019.522.0_x64__79rhkp1fndgsc:/mnt/c/Program’: No such file or directory
+</code></pre>
+
+<h4 id="84_running">8.4 Running<a class="headerlink" href="#84_running" title="Permanent link">#</a></h4>
+<h5 id="go_back_to_your_main_working_directory_and_run">Go back to your main working directory and run:<a class="headerlink" href="#go_back_to_your_main_working_directory_and_run" title="Permanent link">#</a></h5>
+<p>64-bit</p>
+<pre><code>sudo qemu-system-riscv64 -nographic -machine virt -kernel riscv-pk/build/bbl -append &quot;root=/dev/vda ro console=ttyS0&quot; -drive file=busybear-linux/busybear.bin,format=raw,id=hd0 -device virtio-blk-device,drive=hd
+</code></pre>
+
+<p>32-bit</p>
+<pre><code>sudo qemu-system-riscv32 -nographic -machine virt -kernel riscv-pk/build/bbl -append &quot;root=/dev/vda ro console=ttyS0&quot; -drive file=busybear-linux/busybear.bin,format=raw,id=hd0 -device virtio-blk-device,drive=hd
+</code></pre>
+
+<p>The default credentials are:
+- username root
+- password busybear</p>
+<h4 id="_2">추가사항<a class="headerlink" href="#_2" title="Permanent link">#</a></h4>
+<ul>
+<li>domain : 제한할 대상작성 (*, user명, 그룹명을 줄 수 있다.(그룹에 적용할 경우 @가 붙는다))</li>
+<li>type : 강하게 제한할 것인지, 어느정도 여유를 줄 것인지를 결정한다.</li>
+<li>soft : soft로 설정한 용량을 넘어가면 '경고' 메시지를 남깁니다..</li>
+<li>hard : 어떠한 일이 있어도 hard를 넘을 수 없다는 의미이다.</li>
+<li>item : 제한할 항목으로 core, data seg, file size등 여러가지가 존재.</li>
+<li>nproc : 최대 프로세스의 갯수(KB)</li>
+<li>stack : 최대 스택 사이즈(KB)</li>
+<li>nofile : 한번에 열 수 있는 최대 파일 수</li>
+<li>core : core파일의 사이즈(KB)</li>
+<li>value : 제한 하고자 하는 설정값</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
