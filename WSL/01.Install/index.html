@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Install - VLSISYS Lab. (SookMyung Women's Univ.)</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Install";
+    var mkdocs_page_input_path = "WSL/01.Install.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> VLSISYS Lab. (SookMyung Women's Univ.)</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">WSL</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Install</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#wsl">WSL 설치</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_1">사용자 설정 및 필수 패키지 설치</a></li>
+    
+
+    <li class="toctree-l3"><a href="#xming">Xming 설치</a></li>
+    
+
+    <li class="toctree-l3"><a href="#xming_1">Xming 자동실행 등록</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_2">필수 패키지 설치 내용 관련</a></li>
+    
+
+    <li class="toctree-l3"><a href="#bash">Bash 설정</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../02.LinuxBasic/">Linux Basic</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">RISC-V</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../RISC-V/StartGuide/">Start Guide</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../misc/">Misc.</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">VLSISYS Lab. (SookMyung Women's Univ.)</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>WSL &raquo;</li>
+        
+      
+    
+    <li>Install</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="wsl">WSL 설치<a class="headerlink" href="#wsl" title="Permanent link">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>WSL은 Windows Subsystem for Linux의 약자로 Ubuntu 환경을 지원함</p>
+</div>
+<p><img alt="" src="../img/fig1.png" /></p>
+<ol>
+<li>Win Key -&gt; 'windows 기능' 검색 -&gt; ‘Windows 기능 켜기/끄기’ 실행</li>
+<li>'Linux용 Windows 하위 시스템' 활성화</li>
+<li>재부팅 물어보면 재부팅 (반드시 해야함)</li>
+<li>Win Key -&gt; 'store' 검색 -&gt; 'Microsoft Store' 실행</li>
+<li>'Ubuntu 18.04 LTS' 설치 (설치 클릭 시 새로 뜨는 창은 닫아 버려도 됨)</li>
+</ol>
+<hr />
+<h2 id="_1">사용자 설정 및 필수 패키지 설치<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>password 타이핑 시 변화가 없어보여도 입력되는 것임</p>
+</div>
+<p><img alt="" src="../img/fig2.png" /></p>
+<ul>
+<li>필수 패키지 설치 (시간이 꽤 걸림)</li>
+</ul>
+<pre><code>git clone https://github.com/woongchoi84/setup
+cd setup/wslSetup
+./autoSetup.bsh
+</code></pre>
+
+<hr />
+<h2 id="xming">Xming 설치<a class="headerlink" href="#xming" title="Permanent link">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Xming (X Server)는 윈도우(Client)에서 리눅스(Host)의 화면을 가져오는 역할을 함</p>
+</div>
+<p><img alt="" src="../img/fig3.png" /></p>
+<ul>
+<li>Xming : 윈도우에서 동작하는 X 서버</li>
+<li>X Window : 플랫폼과 독립적으로 작동하는 윈도 시스템</li>
+<li>설치: <a href="https://sourceforge.net/projects/xming/">https://sourceforge.net/projects/xming/</a> <ul>
+<li>‘xming’ 구글링 시 맨 위 링크</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="xming_1">Xming 자동실행 등록<a class="headerlink" href="#xming_1" title="Permanent link">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li>Xming이 실행 중일 때만 리눅스 상의 화면이 윈도우로 넘어옴 (트레이아이콘 확인!)</li>
+<li>매번 켜기 귀찮으니 자동실행을 등록하자</li>
+</ul>
+</div>
+<p><img alt="" src="../img/fig4.png" /></p>
+<ol>
+<li>Ctrl + R -&gt; <code>shell:startup</code> 입력</li>
+<li>프로그램 창이 뜸</li>
+<li>Window 키 누르고 Xming 검색 -&gt; 파일 위치 열기</li>
+<li><code>Programs\Xming</code> 폴더의 Xming 바로가기 아이콘을 시작 프로그램 폴더로 복사</li>
+<li>이후 부팅 시에 자동으로 Xming이 실행됨</li>
+</ol>
+<h2 id="_2">필수 패키지 설치 내용 관련<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>setup/wslSetup</code> 내의 <code>autoSetup.bsh</code> 파일 관련 설명</p>
+</div>
+<ul>
+<li>레포지토리(저장소) 변경 및 패키지 변경 사항 업데이트</li>
+</ul>
+<pre><code>#! /bin/bash
+# ==================================================
+#  Coded by Woong
+# ==================================================
+# [Make Backup File]
+sudo cp /etc/apt/sources.list /etc/apt/sources.list_bk
+ 
+# [Change Repository]
+sudo sed -i 's/archive.ubuntu.com/ftp.daumkakao.com/g' /etc/apt/sources.list 
+sudo sed -i 's/security.ubuntu.com/ftp.daumkakao.com/g' /etc/apt/sources.list 
+ 
+# [Update &amp; Upgrade]
+sudo apt-get -y update
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y full-upgrade
+
+</code></pre>
+
+<ul>
+<li>필수 패키지 설치 (이건 업데이트 될수도 있음, 그냥 이런게 있구나 참고만)<ul>
+<li>nautilus: 파일 관리 프로그램</li>
+<li>gnome-terminal: 그놈 터미널</li>
+<li>firefox: jupyter 및 파이썬 크롤링용</li>
+</ul>
+</li>
+</ul>
+<pre><code># [Install Essential Tools]
+sudo apt-get -y install build-essential
+sudo apt-get -y install ftpd ssh git vim-gtk3 nautilus
+sudo apt-get -y install x11-apps xfonts-base xfonts-100dpi xfonts-75dpi xfonts-cyrillic dbus-x11
+sudo apt-get -y install gnome-terminal gnome-paint
+sudo apt-get -y install fonts-unfonts-core fonts-unfonts-extra fonts-baekmuk fonts-nanum fonts-nanum-coding fonts-nanum-extra
+sudo apt-get -y install imagemagick-6.q16
+sudo apt-get -y install graphicsmagick-imagemagick-compat
+sudo apt-get -y install imagemagick-6.q16hdri
+sudo apt-get -y install firefox
+sudo apt-get -y install language-pack-ko
+sudo locale-gen ko_KR.UTF-8
+sudo apt-get -y install tcl-dev tk-dev python3-dev python3-pip python3-tk
+</code></pre>
+
+<ul>
+<li>TensorFlow 및 파이썬 패키지 관련</li>
+</ul>
+<pre><code># [TensorFlow]
+sudo pip3 install --upgrade pip
+sudo pip3 install numpy scipy matplotlib pillow pypi progress idx2numpy
+sudo pip3 install jupyter jupyterlab
+sudo pip3 install tensorflow
+</code></pre>
+
+<ul>
+<li>파일 수정 권한 관련 에러 수정 및 Bash/Vim 환경 설정</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>rcfile은 run control 파일</li>
+<li>보통 환경설정 관련 정보가 담겨있음</li>
+</ul>
+</div>
+<pre><code># [Remove Minor Warning]
+sudo chown -R ${USER}:${USER} ~/.cache
+ 
+# [Bash Environment Setup]
+printf &quot;\nsource\t~/.bashrc_add&quot; &gt;&gt; ~/.bashrc
+cp .bashrc_add ~
+cp .vimrc ~
+source ~/.bashrc
+</code></pre>
+
+<hr />
+<h2 id="bash">Bash 설정<a class="headerlink" href="#bash" title="Permanent link">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>우리가 사용하는 터미널의 설정을 할수 있다</p>
+</div>
+<ul>
+<li><code>~/.bashrc</code> 파일</li>
+</ul>
+<p>원본 설정 파일인 <code>.bashrc</code>의 수정을 최소화하기 위해 파일 맨 하단만 아래와 같이 수정 (<code>setup/wslSetup/autoSetup.bsh</code> 실행 시 자동으로 됨)</p>
+<pre><code>source ~/.bashrc_add
+</code></pre>
+
+<ul>
+<li><code>~/.bashrc_add</code> 파일<ul>
+<li>DISPLAY: 화면을 뿌려줄 디스플레이 설정 (이건 뭔가 불완전하다. 더 봐야할듯)</li>
+<li>PS1: 프롬프트 설정으로 색깔, 날짜 등을 어떻게 표시할지 설정</li>
+<li>alias: 단축키 개념으로 긴 커맨드를 줄여서 쓸수 있음</li>
+<li>cd function: 폴더 이동 시 각 폴더 내의 내용물을 자동으로 보여주도록 수정함</li>
+</ul>
+</li>
+</ul>
+<pre><code>export  DISPLAY=0:0
+export  PS1=&quot;[\[\e[0;36m\]\u - \[\e[0;37m\]\D{%Y.%m.%d} \t\[\e[0;39m\]]\n\[\e[0;31m\]\${PWD}: \[\e[0;39m\]&quot;
+alias   src='source ~/.bashrc'
+alias   g='gvim -p'
+alias   t='gnome-terminal'
+ 
+function    cd { if (( $#==0 )); then builtin cd ~ &amp;&amp; ls; else builtin cd &quot;$@&quot; &amp;&amp; ls; fi }
+ 
+cd
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../02.LinuxBasic/" class="btn btn-neutral float-right" title="Linux Basic">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../02.LinuxBasic/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

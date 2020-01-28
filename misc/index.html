@@ -7,23 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>WSL (Window-Subsystem-for-Linux) Install Guide - VLSISYS Lab. (SookMyung Women's Univ.)</title>
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Misc. - VLSISYS Lab. (SookMyung Women's Univ.)</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
-    var mkdocs_page_name = "WSL (Window-Subsystem-for-Linux) Install Guide";
-    var mkdocs_page_input_path = "WSL/00_install.md";
+    var mkdocs_page_name = "Misc.";
+    var mkdocs_page_input_path = "misc.md";
     var mkdocs_page_url = null;
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
@@ -36,9 +36,9 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> VLSISYS Lab. (SookMyung Women's Univ.)</a>
+        <a href=".." class="icon icon-home"> VLSISYS Lab. (SookMyung Women's Univ.)</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -50,12 +50,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../about/">About</a>
+    <a class="" href="..">Home</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -64,7 +59,11 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="/WSL/00_install">Install</a>
+    <a class="" href="../WSL/01.Install/">Install</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../WSL/02.LinuxBasic/">Linux Basic</a>
                 </li>
     </ul>
 	    </li>
@@ -75,44 +74,19 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="/RISC-V/Chapter01">Chapter01</a>
+    <a class="" href="../RISC-V/StartGuide/">Start Guide</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="/RISC-V/Chapter02">Chapter02</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="/RISC-V/Chapter03">Chapter03</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="/RISC-V/Chapter04">Chapter04</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="/RISC-V/Chapter05">Chapter05</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="/RISC-V/Chapter06">Chapter06</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="/RISC-V/Chapter07">Chapter07</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="/RISC-V/Chapter08">Chapter08</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="/RISC-V/Chapter09">Chapter09</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="/RISC-V/Chapter10">Chapter10</a>
-                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Misc.</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#lab_slide_template">Lab. Slide Template</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -126,7 +100,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">VLSISYS Lab. (SookMyung Women's Univ.)</a>
+        <a href="..">VLSISYS Lab. (SookMyung Women's Univ.)</a>
       </nav>
 
       
@@ -134,11 +108,11 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../..">Docs</a> &raquo;</li>
+    <li><a href="..">Docs</a> &raquo;</li>
     
       
     
-    <li>WSL (Window-Subsystem-for-Linux) Install Guide</li>
+    <li>Misc.</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -148,14 +122,23 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="first_paragraph">first paragraph<a class="headerlink" href="#first_paragraph" title="Permanent link">#</a></h2>
-<h3 id="test_h2">test h2<a class="headerlink" href="#test_h2" title="Permanent link">#</a></h3>
-<h4 id="test_h3">test h3<a class="headerlink" href="#test_h3" title="Permanent link">#</a></h4>
-<h5 id="h4">h4<a class="headerlink" href="#h4" title="Permanent link">#</a></h5>
+                <h2 id="lab_slide_template">Lab. Slide Template<a class="headerlink" href="#lab_slide_template" title="Permanent link">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>나눔글꼴 설치 필요</p>
+</div>
+<p><a href="../files/vlsisysTemplate.pptx">템플릿 파일 다운로드</a></p>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../RISC-V/StartGuide/" class="btn btn-neutral" title="Start Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -179,12 +162,14 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
+        <span><a href="../RISC-V/StartGuide/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
       
     </span>
 </div>
-    <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js" defer></script>
-      <script src="../../search/main.js" defer></script>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
 
 </body>
 </html>
